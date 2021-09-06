@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea inputmode="text"  placeholder="aloalo12345" name="test" id="thuxem" cols="20" rows="1" style="resize: none;"></textarea>
+</body>
+<script>
+    var numRow = 1;
+document.querySelector('#thuxem').addEventListener('keypress', function (e) {
+    // console.log(e.keyCode);
+    if (e.key === 'Enter') {
+        if (numRow === 5) return;
+        // console.log(document.querySelector("textarea").value);
+        console.log(document.querySelector('#thuxem').getAttribute('rows'));
+        document.querySelector('#thuxem').setAttribute('rows', (++numRow));
+    }
+});
+</script>
+</html>
